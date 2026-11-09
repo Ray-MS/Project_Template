@@ -1,0 +1,31 @@
+[project]
+name = "research-project"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "matplotlib",
+    "monai==1.5.2",
+    "nibabel",
+    "numpy",
+    "pandas",
+    "pydicom",
+    "scipy",
+    "torch==2.6.0+cu124",
+    "torchvision==0.21.0+cu124",
+    "tqdm",
+]
+
+[tool.uv]
+environments = [
+    "sys_platform == 'win32'",
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
