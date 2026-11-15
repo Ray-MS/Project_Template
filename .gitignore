@@ -1,3 +1,4 @@
 /manuscript/build/
 /code/.venv/
+/code/environments/rtx5090/.venv/
 /code/**/__pycache__/
